@@ -3,10 +3,23 @@ import React from 'react';
 function MissionVision() {
 
   return(
-    <div className="missionVisionContainer">
+    <div className="dashContainer">
 
-      <div>
-        My mission is to secure this position and become and better developer!
+      <div className="reportsDash">
+        <form className="missionForm">
+        <label className="missionStatement">Mission Statement</label>
+        <textarea className="missionStatementTxt"
+                  name="mission"
+                  rows="6"
+                  cols="50"
+                  placeholder="My mission is to become a better developer, look back at this experience and (hopefully) have a laugh!"
+                  >
+        </textarea>
+        <label>Goals to kick on the way:</label>
+        <input type="text" name="mission" size="90"></input>
+        <input type="text" name="mission" size="90"></input>
+        <input type="text" name="mission" size="90"></input>
+        </form>
       </div>
 
     </div>

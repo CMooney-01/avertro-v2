@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./components/FontawesomeIcons";
 import './App.css';
 import SideNav from "./components/SideNav.js"
 import Branding from "./components/Branding.js"
