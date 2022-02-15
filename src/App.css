@@ -4,28 +4,312 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   background-color: #f5f5f5;
+  margin: 0;
 }
 
 .App {
   text-align: center;
 }
 
-/* Branding component */
-.branding {
-  width: 100%;
-  background-color: #ffff;
+@media (min-width: 500px) {
+  /* Branding component */
+  .branding {
+    width: 100%;
+    height: auto;
+    background-color: #ffff;
+  }
 
+  .avertro-logo {
+    height: 6vh;
+  }
+
+  /* Navbar component  */
+  .menu-icon {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    padding: 5px;
+
+  }
+   .navbar {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    background-color: #ffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar, a {
+    text-decoration: none;
+    color: #27285C;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 75vw;
+    justify-content: center;
+  }
+
+  .active {
+    display: none;
+    height: 50px;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding-top: 25px;
+
+    width:95%;
+    font-size: .75rem;
+  }
+
+  .nav-item.active {
+    background-color: #f5f5f5;
+    /* border-left: solid;
+    border-left-width: 5px;
+    border-image: linear-gradient(to bottom, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 25%,rgba(0,0,0,1) 75%,rgba(0,0,0,0) 75%);
+    border-image-slice: 2; */
+  }
+
+  .nav-item:hover {
+    background-color: #dcdcdc;
+    /* border-left: solid;
+    border-left-width: 5px;
+    border-image: linear-gradient(to bottom, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 25%,rgba(0,0,0,1) 75%,rgba(0,0,0,0) 75%);
+    border-image-slice: 2; */
+  }
+
+  /* Reports page  */
+
+  .reportsPage {
+    width: 90%;
+    float: right;
+    margin-right: 4%;
+    background-color: #f5f5f5;
+  }
+
+  .pageHeading {
+    text-align: left;
+    color: #27285C;
+    margin-top: 10%;
+    font-size: 1.25rem;
+  }
+
+  .horizontalRule {
+    border: none;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin-bottom: 5%;
+  }
+
+  /* ReportsDashboard  */
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .dashButton {
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    border-radius: 15px;
+    border-style: none;
+    padding:20px;
+    padding-bottom: 30px;
+
+    background-color:	#dcdcdc;
+    color: #27285C;
+
+    position: relative;
+    z-index: 0;
+  }
+
+  .activeButton {
+    background-color: #ffff;
+  }
+
+
+  .activeDash {
+    height: 80vh;
+    margin-top: -3%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #ffff;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Mission & Vision component  */
+  .missionVisionContainer {
+    height: auto;
+    background-color: #ffff;
+  }
+
+  /* Strategic Business Objectives component */
+  .hidden {
+    display: none;
+  }
+  .dashContainer {
+      height: auto;
+      background-color: #ffff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  .formContainer {
+    width: 90%;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "left left left left"
+      "right right right right"
+      "bottom bottom bottom bottom";
+    gap: 50px;
+  }
+
+  .form-right {
+    grid-area: right;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:auto;
+    margin-top: -8vh;
+  }
+
+  .form-left {
+    grid-area: left;
+    margin-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .formBottom {
+    grid-area: bottom;
+    padding: 20px;
+  }
+
+  label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #27285C;
+    margin-bottom: 10px;
+    float: left;
+  }
+
+  .add-measure {
+    font-size: .75rem;
+    float: right;
+    margin-top: 12px;
+  }
+
+  .add-measure-button {
+    border-radius: 50%;
+    border-style: none;
+    background-color: #27285C;
+    color: #ffff;
+    font-size: .8rem;
+    font-weight: 700;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+  }
+
+  input {
+    line-height: 2.5rem;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a9a9a9;
+    margin-bottom: 10px;
+    width: 90%;
+  }
+
+  .form-input {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  [type="date"] {
+    width: 90%;
+  }
+
+  .formUpdateButton {
+    font-size: 1rem;
+    font-weight: 200;
+
+    border-radius: 6px;
+    border-style: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+
+    background-color:	#27285C;
+    color: #ffff;
+    float: left;
+
+    cursor: pointer;
+  }
+
+  .add-objective-button {
+    font-size: 1rem;
+    font-weight: 200;
+
+    border-radius: 6px;
+    border-style: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+
+    background-color:	#27285C;
+    color: #ffff;
+    float: right;
+    margin-right: 5%;
+    cursor: pointer;
+  }
+
+  /* Mission & Vision  */
+  .missionForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap:20px;
+  }
+
+  .missionStatementTxt {
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a9a9a9;
+  }
 }
 
-.avertro-logo {
-  height: 6vh;
-}
-
-/* Navbar component */
+@media (min-width: 992px) {
+  /* Navbar component */
+.menu-icon {
+  display:none;
+  }
 .navbar {
   background-color: #ffff;
   height: 92vh;
-  width: 6%;
+  width: 9%;
 
   position: fixed;
   z-index: 1;
@@ -36,6 +320,13 @@ body {
   align-items: center;
 }
 
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -400%;
+}
+
 .navbar, a {
   text-decoration: none;
   color: #27285C
@@ -44,11 +335,10 @@ body {
 .nav-item {
   display: flex;
   flex-direction: column;
-  gap:20px;
-  padding-top: 25px;
-  height: 8%;
-  width:95%;
+  height: 75px;
+  width:75%;
   font-size: .75rem;
+  margin-left: -15%;
 }
 
 .nav-item.active {
@@ -66,20 +356,19 @@ body {
   border-image: linear-gradient(to bottom, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 25%,rgba(0,0,0,1) 75%,rgba(0,0,0,0) 75%);
   border-image-slice: 2;
 }
-
 /* Reports page  */
 
 .reportsPage {
-  width: 87%;
+  width: 85%;
   float: right;
-  margin-right: 4%;
+  margin-right: 3%;
   background-color: #f5f5f5;
 }
 
 .pageHeading {
   text-align: left;
   color: #27285C;
-  margin-top: 2%;
+  margin-top: 5%;
   font-size: 1.25rem;
 }
 
@@ -87,7 +376,7 @@ body {
   border: none;
   height: 1px;
   background-color: #dcdcdc;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 /* ReportsDashboard  */
@@ -111,14 +400,14 @@ body {
   z-index: 0;
 }
 
-.active {
+.activeButton {
   background-color: #ffff;
 }
 
 
 .activeDash {
-  height: 70vh;
-  margin-top: -1%;
+  height: 80vh;
+  margin-top: -2%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #ffff;
@@ -127,21 +416,9 @@ body {
   z-index: 1;
 }
 
-/* Mission & Vision component  */
-.missionVisionContainer {
-  height: 400px;
-  background-color: #ffff;
-}
-
 /* Strategic Business Objectives component */
-.hidden {
-  display: none;
-}
-.dashContainer {
-    height: auto;
-    background-color: #ffff;
-    padding-top: 20px;
-    padding-bottom: 20px;
+[type="date"] {
+  width: 100%;
 }
 
 .formContainer {
@@ -151,118 +428,137 @@ body {
   border-width: 1px;
   border-radius: 12px;
 
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "left left right right"
+    "bottom bottom bottom bottom";
   gap: 50px;
 }
 
-.form-right {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-right: 20px;
-}
-
 .form-left {
+  grid-area: left;
   margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
-
 }
 
-label {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #27285C;
-  margin-bottom: 10px;
-  float: left;
-}
-
-.add-measure {
-  font-size: .75rem;
-  float: right;
-  margin-top: 12px;
-}
-
-.add-measure-button {
-  border-radius: 50%;
-  border-style: none;
-  background-color: #27285C;
-  color: #ffff;
-  font-size: .8rem;
-  font-weight: 700;
-  height: 19px;
-  width: 19px;
-  cursor: pointer;
-}
-
-input {
-  line-height: 2.5rem;
-  border-radius: 6px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #a9a9a9;
-  margin-bottom: 10px;
-}
-
-.form-input {
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-}
-
-[type="date"] {
-  width: 90%;
-}
-
-.formUpdateButton {
-  font-size: 1rem;
-  font-weight: 200;
-
-  border-radius: 6px;
-  border-style: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-
-  background-color:	#27285C;
-  color: #ffff;
-  float: left;
-
-  cursor: pointer;
-}
-
-.add-objective-button {
-  font-size: 1rem;
-  font-weight: 200;
-
-  border-radius: 6px;
-  border-style: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-
-  background-color:	#27285C;
-  color: #ffff;
-  float: right;
-  margin-right: 5%;
-  cursor: pointer;
-}
-
-/* Mission & Vision  */
-.missionForm {
-  width: 70%;
+.form-right {
+  grid-area: right;
   display: flex;
   flex-direction: column;
+  gap: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: auto;
-  gap:20px;
+  margin-top: 1%;
 }
 
-.missionStatementTxt {
-  line-height: 1.5rem;
-  font-size: 1.5rem;
-  border-radius: 6px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #a9a9a9;
+.formBottom {
+  grid-area: bottom;
+  display: flex;
+
+  padding: 20px;
+  margin-top: -5%;
+}
+}
+
+@media (min-width: 1400px) {
+  /* Navbar component */
+.navbar {
+  height: 100vh;
+  width: 7%;
+  margin-top: -10vh;
+
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -200%;
+}
+
+.navbar, a {
+  text-decoration: none;
+  color: #27285C
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  height: 75px;
+  width:95%;
+  font-size: .75rem;
+  justify-content: center;
+  margin-left: -20%;
+
+}
+/* Reports page  */
+
+.reportsPage {
+  margin-right: 4%;
+}
+
+/* ReportsDashboard  */
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+.dashButton {
+  padding-bottom: 40px;
+}
+
+.activeDash {
+  height: 60vh;
+}
+
+/* Strategic Business Objectives component */
+.formContainer {
+  gap: 10px;
+}
+
+.formBottom {
+  padding: 30px;
+  margin-top: -3%;
+}
+}
+
+@media (min-width: 1800px) {
+  /* Navbar component */
+.navbar {
+  width: 4%;
+  margin-top: -10vh;
+}
+/* Reports page  */
+.reportsPage {
+  margin-right: 6%;
+}
+
+/* ReportsDashboard  */
+.dashButton {
+  padding-bottom: 65px;
+}
+
+.activeDash {
+  height: 60vh;
+}
+
+/* Strategic Business Objectives component */
+.formContainer {
+  padding: 40px;
+}
+.form-left {
+  margin-top: 20px;
+}
+
+.form-right {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.formBottom {
+  padding: 30px;
+  margin-top: -1%;
+}
 }

@@ -51,7 +51,7 @@ const FormComponent = () => {
                         <p>
                           <input type="text" name="measure3" value={formik.values.measure3} onChange={formik.handleChange} className="form-input" size="90"></input>
                         </p>
-                        <button type="submit" className="formUpdateButton">Update</button>
+
                       </div>
                       <div className="form-right">
                         <p>
@@ -62,7 +62,10 @@ const FormComponent = () => {
                           <label htmlFor="endDate">End Date: </label>
                           <input type="date" name="endDate" value={formik.values.endDate} onChange={formik.handleChange} className="form-input" size="45"></input>
                         </p>
-                  </div>
+                      </div>
+                      <div className="formBottom">
+                      <button type="submit" className="formUpdateButton">Update</button>
+                      </div>
             </form>
 
             <button className="add-objective-button">Add New Objective</button>

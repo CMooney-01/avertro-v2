@@ -16,9 +16,9 @@ function MissionVision() {
                   >
         </textarea>
         <label>Goals to kick on the way:</label>
-        <input type="text" name="mission" size="90"></input>
-        <input type="text" name="mission" size="90"></input>
-        <input type="text" name="mission" size="90"></input>
+        <input className="missionGoals" type="text" name="mission" size="90"></input>
+        <input className="missionGoals" type="text" name="mission" size="90"></input>
+        <input className="missionGoals" type="text" name="mission" size="90"></input>
         </form>
       </div>
 
