@@ -1,38 +1,240 @@
+body {
+  background-color: #dcdcdc;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Branding component */
+.branding {
+  width: 100%;
+  background-color: #ffff;
+  /* using border to visualise div */
+  border-style: solid;
+  border-width: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.avertro-logo {
+  height: 6vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar component */
+.navbar {
+  /* using border to visualise div */
+  border-style: solid;
+  border-width: 2px;
+
+  background-color: #ffff;
+  height: 92vh;
+  width: 6%;
+
+  position: fixed;
+  z-index: 1;
+  margin-top: 6.6vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar, a {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+  margin-top: 20px;
+  height: 8%;
+
+  font-size: .75rem;
+}
+
+/* Reports page  */
+
+.reportsPage {
+  width: 87%;
+  float: right;
+  margin-right: 4%;
+
+  /* using border to visualise div */
+  border-style: solid;
+  border-color: orange;
+  border-width: 2px;
+
+  background-color: #dcdcdc;
+}
+
+.pageHeading {
+  text-align: left;
+
+  margin-top: 2%;
+  font-size: 1.25rem;
+}
+
+.horizontalRule {
+  border: none;
+  height: 1px;
+  background-color: gray;
+  margin-bottom: 2%;
+}
+
+.reportsContainer {
+  /* using border to visualise div */
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+}
+
+/* ReportsDashboard  */
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+.dashButton {
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  border-radius: 15px;
+  border-style: none;
+  padding:20px;
+  padding-bottom: 30px;
+
+  background-color:	#a9a9a9;
+  color: #27285C;
+
+  position: relative;
+  z-index: 0;
+}
+
+.active {
+  background-color: #ffff;
+}
+
+
+.activeDash {
+  height: 70vh;
+  margin-top: -1%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: purple;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Mission & Vision component  */
+.missionVisionContainer {
+  height: 400px;
+  background-color: red;
+}
+
+/* Strategic Business Objectives component */
+.stratObjContainer {
+    height: auto;
+    background-color: #ffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.formContainer {
+  width: 90%;
+  margin: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.form-right {
+  display: flex;
+  flex-direction: row;
+  gap: 130px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-left {
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #27285C;
+  margin-bottom: 10px;
+}
+
+.add-measure {
+  font-size: .75rem;
+  float: right;
+  margin-top: 12px;
+}
+
+.add-measure-button {
+  border-radius: 50%;
+  border-style: none;
+  background-color: #27285C;
+  color: #ffff;
+  font-size: .8rem;
+  font-weight: 700;
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
+}
+
+input {
+  line-height: 2.5rem;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a9a9a9;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+[type="date"] {
+  width: 190%;
+}
+
+.formUpdateButton {
+  font-size: 1rem;
+  font-weight: 200;
+
+  border-radius: 6px;
+  border-style: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+
+  background-color:	#27285C;
+  color: #ffff;
+  float: left;
+
+  cursor: pointer;
+}
+
+.add-objective-button {
+  font-size: 1rem;
+  font-weight: 200;
+
+  border-radius: 6px;
+  border-style: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+
+  background-color:	#27285C;
+  color: #ffff;
+  float: right;
+  margin-right: 5%;
+  cursor: pointer;
 }
